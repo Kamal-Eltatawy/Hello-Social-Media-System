@@ -4,6 +4,7 @@ Welcome to the Small Windows Form Social Media System repository! This project i
 
 Key Features:
 All Posts Are In Data Grid View.
+
 User Registration: New users can create accounts by providing basic information.
 
 User Login: Registered users can log in to access the social media platform.
