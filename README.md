@@ -10,7 +10,7 @@ User Registration: New users can create accounts by providing basic information.
 User Login: Registered users can log in to access the social media platform.
 
 User Profiles: Users can create profiles with basic information.
-
+Profile Edit: Users can Edit profiles with Their information.
 Post Creation: Users can create text-based posts, share their thoughts, and upload images.
 
 Feed: The application provides a news feed where users can view posts from other users.
