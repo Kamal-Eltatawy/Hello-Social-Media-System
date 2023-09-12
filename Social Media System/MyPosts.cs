@@ -124,40 +124,40 @@ namespace Social_Media_System
                         !String.IsNullOrEmpty(txt_post_title.Text)
                         && !String.IsNullOrEmpty(rtb_description.Text)
                         && pb_mypost.Image != null)
-            {
-                using (DB_Context context = new DB_Context())
                 {
-
-                    var post = new Post();
-
-                    post.Title = txt_post_title.Text;
-                    post.Description = rtb_description.Text;
-                    post.Date = DateTime.Now.Date;
-                    post.Time = DateTime.Now.TimeOfDay;
-                    post.ImageData = imageData;
-                    post.AuturUserName = UserName;
-                    post.Author = context.authors.FirstOrDefault(i => i.UserName == UserName);
-                    post.Catalog = new catalog()
+                    using (DB_Context context = new DB_Context())
                     {
-                        Name = txt_catalogName.Text,
-                        Description = txt_catalogDesc.Text
-                    };
-                    context.Posts.Add(post);
-                    context.SaveChanges();
-                    GetAllData();
+
+                        var post = new Post();
+
+                        post.Title = txt_post_title.Text;
+                        post.Description = rtb_description.Text;
+                        post.Date = DateTime.Now.Date;
+                        post.Time = DateTime.Now.TimeOfDay;
+                        post.ImageData = imageData;
+                        post.AuturUserName = UserName;
+                        post.Author = context.authors.FirstOrDefault(i => i.UserName == UserName);
+                        post.Catalog = new catalog()
+                        {
+                            Name = txt_catalogName.Text,
+                            Description = txt_catalogDesc.Text
+                        };
+                        context.Posts.Add(post);
+                        context.SaveChanges();
+                        GetAllData();
+                    }
+                    MessageBox.Show($" Successful ADD :)");
                 }
-                MessageBox.Show($" Successful ADD :)");
-            }
-            else
-            {
-                MessageBox.Show($" ADD Faild => Your Data Is Invalid :(");
+                else
+                {
+                    MessageBox.Show($" ADD Faild => Your Data Is Invalid :(");
 
-            }
+                }
 
-            btn_Add.Visible = true;
-            btn_Edit.Visible = false;
-            btn_delete.Visible = false;
-        }
+                btn_Add.Visible = true;
+                btn_Edit.Visible = false;
+                btn_delete.Visible = false;
+            }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error Adding Your Posts: {ex.Message}");
@@ -165,7 +165,7 @@ namespace Social_Media_System
 
 
 
-}
+        }
         private void btn_Edit_Click(object sender, EventArgs e)
         {
             try
@@ -190,6 +190,7 @@ namespace Social_Media_System
                     }
                     context.SaveChanges();
                 }
+                GetAllData();
                 MessageBox.Show($" Successful Edit :)");
                 btn_Add.Visible = true;
                 btn_Edit.Visible = false;
@@ -225,6 +226,22 @@ namespace Social_Media_System
 
                 MessageBox.Show($"Error Deleting Your Posts: {ex.Message}");
             }
+        }
+
+        private void btn_Allpost_Click(object sender, EventArgs e)
+        {
+            AllPosts allPosts = new AllPosts();
+            allPosts.UserName= UserName;
+            allPosts.Show();
+            this.Hide();
+        }
+
+        private void btn_myProfile_Click(object sender, EventArgs e)
+        {
+            Profile myProfile = new Profile();
+            myProfile.UserName = UserName;
+            myProfile.Show();
+            this.Hide();
         }
     }
 }

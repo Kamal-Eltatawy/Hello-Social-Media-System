@@ -1,6 +1,6 @@
 ﻿namespace Social_Media_System
 {
-    partial class CreatePost
+    partial class ChangePassword
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "CreatePost";
+            this.Text = "ChangePassword";
         }
 
         #endregion

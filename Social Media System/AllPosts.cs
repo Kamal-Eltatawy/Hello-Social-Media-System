@@ -14,7 +14,7 @@ namespace Social_Media_System
     public partial class AllPosts : Form
     {
         Post PostData;
-        
+
         public string UserName { get; set; }
         public AllPosts()
         {
@@ -84,21 +84,27 @@ namespace Social_Media_System
 
         private void btn_mypost_Click(object sender, EventArgs e)
         {
-            MyPosts myPosts = new MyPosts()
-            {
-                UserName = UserName
-            };
+            MyPosts myPosts = new MyPosts();
+            myPosts.UserName= UserName;
             myPosts.Show();
             this.Hide();
         }
 
         private void btn_createPost_Click(object sender, EventArgs e)
         {
-            CreatePost  createPost = new CreatePost()
+            AllCatalog allCatalog = new AllCatalog()
             {
                 UserName = UserName
             };
-            createPost.Show();
+            allCatalog.Show();
+            this.Hide();
+        }
+
+        private void btn_Profile_Click(object sender, EventArgs e)
+        {
+            Profile myProfile = new Profile();
+            myProfile.UserName = UserName;
+            myProfile.Show();
             this.Hide();
         }
     }

@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Social_Media_System
 {
-    public partial class CreatePost : Form
+    public partial class ChangePassword : Form
     {
         public string UserName { get; set; }
-        public CreatePost()
+        public ChangePassword()
         {
             InitializeComponent();
         }

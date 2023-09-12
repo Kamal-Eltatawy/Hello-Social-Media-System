@@ -46,92 +46,103 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(328, 73);
+            label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(333, 93);
             label1.Name = "label1";
-            label1.Size = new Size(104, 35);
+            label1.Size = new Size(141, 46);
             label1.TabIndex = 0;
             label1.Text = "Register";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(304, 9);
+            label2.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(192, 0, 0);
+            label2.Location = new Point(39, 19);
             label2.Name = "label2";
-            label2.Size = new Size(160, 46);
+            label2.Size = new Size(237, 81);
             label2.TabIndex = 1;
-            label2.Text = "Welcome";
+            label2.Text = " Hello :)";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(63, 162);
+            label3.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(52, 176);
             label3.Name = "label3";
-            label3.Size = new Size(82, 20);
+            label3.Size = new Size(95, 23);
             label3.TabIndex = 2;
             label3.Text = "User Name";
             // 
             // txt_usname
             // 
-            txt_usname.Location = new Point(171, 159);
+            txt_usname.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_usname.Location = new Point(160, 173);
             txt_usname.Name = "txt_usname";
-            txt_usname.Size = new Size(144, 27);
+            txt_usname.Size = new Size(207, 30);
             txt_usname.TabIndex = 3;
             // 
             // txt_pass
             // 
-            txt_pass.Location = new Point(171, 216);
+            txt_pass.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_pass.Location = new Point(160, 230);
             txt_pass.Name = "txt_pass";
-            txt_pass.Size = new Size(144, 27);
+            txt_pass.Size = new Size(207, 30);
             txt_pass.TabIndex = 5;
+            txt_pass.UseSystemPasswordChar = true;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(63, 223);
+            label4.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(52, 237);
             label4.Name = "label4";
-            label4.Size = new Size(70, 20);
+            label4.Size = new Size(80, 23);
             label4.TabIndex = 4;
             label4.Text = "Password";
             // 
             // txt_email
             // 
-            txt_email.Location = new Point(527, 155);
+            txt_email.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_email.Location = new Point(516, 169);
             txt_email.Name = "txt_email";
-            txt_email.Size = new Size(201, 27);
+            txt_email.Size = new Size(201, 30);
             txt_email.TabIndex = 7;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(475, 158);
+            label5.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(464, 172);
             label5.Name = "label5";
-            label5.Size = new Size(46, 20);
+            label5.Size = new Size(51, 23);
             label5.TabIndex = 6;
             label5.Text = "Email";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(475, 219);
+            label6.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(464, 233);
             label6.Name = "label6";
-            label6.Size = new Size(36, 20);
+            label6.Size = new Size(40, 23);
             label6.TabIndex = 8;
             label6.Text = "Age";
             // 
             // nud_age
             // 
-            nud_age.Location = new Point(527, 212);
+            nud_age.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            nud_age.Location = new Point(516, 226);
             nud_age.Name = "nud_age";
-            nud_age.Size = new Size(62, 27);
+            nud_age.Size = new Size(201, 30);
             nud_age.TabIndex = 10;
             // 
             // btn_register
             // 
-            btn_register.Location = new Point(190, 303);
+            btn_register.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_register.Location = new Point(185, 297);
             btn_register.Name = "btn_register";
-            btn_register.Size = new Size(173, 29);
+            btn_register.Size = new Size(173, 38);
             btn_register.TabIndex = 11;
             btn_register.Text = "Register";
             btn_register.UseVisualStyleBackColor = true;
@@ -139,9 +150,10 @@
             // 
             // btn_login
             // 
-            btn_login.Location = new Point(457, 303);
+            btn_login.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_login.Location = new Point(529, 297);
             btn_login.Name = "btn_login";
-            btn_login.Size = new Size(173, 29);
+            btn_login.Size = new Size(173, 38);
             btn_login.TabIndex = 12;
             btn_login.Text = "Login";
             btn_login.UseVisualStyleBackColor = true;
@@ -151,6 +163,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.IndianRed;
             ClientSize = new Size(800, 450);
             Controls.Add(btn_login);
             Controls.Add(btn_register);

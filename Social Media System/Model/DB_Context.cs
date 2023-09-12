@@ -20,7 +20,7 @@ namespace Social_Media_System.Model
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Post>().Property<TimeSpan>(n => n.Time).HasPrecision(7);
+            modelBuilder.Entity<Post>().Property<TimeSpan>(n => n.Time).HasPrecision(3);
             modelBuilder.Entity<Post>().Property<DateTime>(n => n.Date).HasColumnType("Date");
 
         }

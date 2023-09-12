@@ -32,22 +32,21 @@ namespace Social_Media_System
         }
         public bool IsPassWordValid(string userName, string password)
         {
-            Author ? userPassword = context.authors.FirstOrDefault
+            Author? userPassword = context.authors.FirstOrDefault
                                     (i => i.UserName == userName);
             if (userPassword != null && password != null && userPassword.Password == password)
                 return true;
-                return false;
+            return false;
         }
-
         private void btn_login_Click(object sender, EventArgs e)
         {
             if (IsUserNameValid(txt_usname.Text) && !string.IsNullOrEmpty(txt_pass.Text))
             {
                 if (IsPassWordValid(txt_usname.Text, txt_pass.Text))
                 {
-                    AllPosts allPosts = new AllPosts();
-                    allPosts.UserName = txt_usname.Text;
-                    allPosts.Show();
+                    Profile profile = new Profile();
+                    profile.UserName = txt_usname.Text;
+                    profile.Show();
                     this.Hide();
                 }
                 else
@@ -55,6 +54,10 @@ namespace Social_Media_System
                     MessageBox.Show("Your UserName And Password Dosnt Match ");
                 }
 
+            }
+            else
+            {
+                MessageBox.Show("Invalid Data ");
             }
         }
     }

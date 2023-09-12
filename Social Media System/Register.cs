@@ -1,34 +1,24 @@
 using Social_Media_System.Model;
+using Social_Media_System.Validtion;
+using System.Text.RegularExpressions;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Social_Media_System
 {
     public partial class fr_Register : Form
     {
 
-        private DB_Context context;
+        public DB_Context context;
         public fr_Register()
         {
             InitializeComponent();
-            context = new DB_Context();
         }
 
-        public bool IsUserNameValid(string userName)
-        {
-            if (userName == null)
-            {
-                MessageBox.Show(" Invalid Username");
-                return false;
-            }
-            else if (context.authors.Any(i => i.UserName == userName))
-            {
-                MessageBox.Show(" Username Isnt available");
-                return false;
-            }
-            return true;
-        }
+
         private void btn_register_Click(object sender, EventArgs e)
         {
-            if (IsUserNameValid(txt_usname.Text) && !string.IsNullOrEmpty(txt_pass.Text) && !string.IsNullOrEmpty(txt_email.Text))
+            context = new DB_Context();
+            if (Validation.IsUserNameValid(txt_usname.Text, context) && Validation.ValidatePassword(txt_pass.Text) && Validation.ValidateEmail(txt_email.Text) && Validation.ValidateAge(nud_age.Value))
             {
                 Author author = new Author()
                 {

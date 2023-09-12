@@ -50,6 +50,7 @@
             label8 = new Label();
             txt_catalogName = new TextBox();
             label7 = new Label();
+            btn_myProfile = new Button();
             ((System.ComponentModel.ISupportInitialize)dgv_MyPost).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pb_mypost).BeginInit();
             SuspendLayout();
@@ -73,11 +74,12 @@
             btn_Allpost.TabIndex = 27;
             btn_Allpost.Text = "All Post";
             btn_Allpost.UseVisualStyleBackColor = true;
+            btn_Allpost.Click += btn_Allpost_Click;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(85, 165);
+            label4.Location = new Point(1, 165);
             label4.Name = "label4";
             label4.Size = new Size(73, 20);
             label4.TabIndex = 26;
@@ -86,7 +88,7 @@
             // lbl_posttime
             // 
             lbl_posttime.AutoSize = true;
-            lbl_posttime.Location = new Point(201, 165);
+            lbl_posttime.Location = new Point(117, 165);
             lbl_posttime.Name = "lbl_posttime";
             lbl_posttime.Size = new Size(0, 20);
             lbl_posttime.TabIndex = 25;
@@ -128,7 +130,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(99, 165);
+            label3.Location = new Point(15, 165);
             label3.Name = "label3";
             label3.Size = new Size(0, 20);
             label3.TabIndex = 20;
@@ -242,11 +244,22 @@
             label7.TabIndex = 34;
             label7.Text = "Catalog Name";
             // 
+            // btn_myProfile
+            // 
+            btn_myProfile.Location = new Point(576, 241);
+            btn_myProfile.Name = "btn_myProfile";
+            btn_myProfile.Size = new Size(209, 36);
+            btn_myProfile.TabIndex = 38;
+            btn_myProfile.Text = "My Profile";
+            btn_myProfile.UseVisualStyleBackColor = true;
+            btn_myProfile.Click += btn_myProfile_Click;
+            // 
             // MyPosts
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btn_myProfile);
             Controls.Add(txt_catalogDesc);
             Controls.Add(label8);
             Controls.Add(txt_catalogName);
@@ -301,5 +314,6 @@
         private Label label8;
         private TextBox txt_catalogName;
         private Label label7;
+        private Button btn_myProfile;
     }
 }
