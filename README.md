@@ -1,6 +1,6 @@
 # Social Media System
 
-Welcome to the Small Windows Form Social Media System repository! This project is a really simple  social media application built using C# and Windows Forms. It allows users to create accounts, log in, and enjoy a social networking experience with features such as creating, reading, updating, and deleting posts. In addition, users can attach photos to their posts, view other users' post photos, and see post timestamps and dates.
+Welcome to the Small Windows Form Social Media System repository! This project is a  simple  social media application built using C# and Windows Forms. It allows users to create accounts, log in, and enjoy a social networking experience with features such as creating, reading, updating, and deleting posts. In addition, users can attach photos to their posts, view other users' post photos, and see post timestamps and dates.
 
 Key Features:
 All Posts Are In Data Grid View.
